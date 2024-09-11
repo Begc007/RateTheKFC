@@ -16,7 +16,8 @@ namespace RateTheKFC.ViewModels
 
         public MainWindowVM(CompanyService companyService){
             _companyService = companyService;
-            // obtain all cities
+            // obtain all companies
+            Companies = new ObservableCollection<Company>(_companyService.GetCompanies());
         }
         private string _searchQuery = string.Empty;
 

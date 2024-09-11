@@ -18,8 +18,12 @@
             <TextBox Text="{Binding SearchQuery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 1 0 5"/>
             <Button Content="Find" IsDefault="True"/>
         </StackPanel>
-        <ListView Grid.Row="1">
-            
+        <ListView Grid.Row="1" ItemsSource="{Binding Companies, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </Window>
