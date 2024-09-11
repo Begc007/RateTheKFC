@@ -7,6 +7,6 @@ namespace RateTheKFC.Models {
         public string? Address { get; set; }
         public string? TwoGisLink { get; set; }
         public string? Comments { get; set; }
-        public List<Feedback>? Feedbacks { get; set; }
+        public List<Feedback> Feedbacks { get; set; } = Enumerable.Empty<Feedback>().ToList();
     }
 }

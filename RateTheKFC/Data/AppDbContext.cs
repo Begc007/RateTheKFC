@@ -23,8 +23,13 @@ namespace RateTheKFC.Data {
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
 
-            //modelBuilder.Entity<Fe>().HasData(new Company { Id = 1, Name = "Best Chicken", CityId= });    
-            //modelBuilder.Entity<Company>().HasData(new Company { Id = 1, Name = "Best Chicken", CityId= });    
+            modelBuilder.Entity<City>().HasData(new City { Id = 1, Name = "Атырау" });
+            modelBuilder.Entity<City>().HasData(new City { Id = 2, Name = "Астана" });
+            modelBuilder.Entity<City>().HasData(new City { Id = 3, Name = "Алматы" });
+            
+            modelBuilder.Entity<Company>().HasData(new Company { Id = 1, Name = "Best Chicken", CityId = 1});    
+            modelBuilder.Entity<Company>().HasData(new Company { Id = 2, Name = "KFC Atyrau", CityId = 1});    
+            modelBuilder.Entity<Company>().HasData(new Company { Id = 3, Name = "Чики Пики Чикен", CityId = 2});    
             
             base.OnModelCreating(modelBuilder);
         }
