@@ -7,10 +7,8 @@
         xmlns:vm="clr-namespace:RateTheKFC.ViewModels"
         mc:Ignorable="d"
         Title="Rate The KFC!" Height="450" Width="300">
-    <Window.Resources>
-        <vm:MainWindowVM x:Key="vm"/>
-    </Window.Resources>
-    <Grid DataContext="{StaticResource vm}" Margin="10">
+
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -20,5 +18,8 @@
             <TextBox Text="{Binding SearchQuery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 1 0 5"/>
             <Button Content="Find" IsDefault="True"/>
         </StackPanel>
+        <ListView Grid.Row="1">
+            
+        </ListView>
     </Grid>
 </Window>
